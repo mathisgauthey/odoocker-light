@@ -17,7 +17,6 @@ services:
       context: ../
       dockerfile: ./.devcontainer/Dockerfile
       args:
-        - PROJECT_NAME=${PROJECT_NAME}
         - ENTERPRISE_ADDONS=${ENTERPRISE_ADDONS}
         - DESIGN_THEMES_ADDONS=${DESIGN_THEMES_ADDONS}
     depends_on:
