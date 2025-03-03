@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "[Attach mode] Attach to Odoo",
+            "type": "python",
+            "request": "attach",
+            "connect": {
+                "port": 8888,
+                "host": "localhost",
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}/extra-addons",
+                    "remoteRoot": "/mnt/extra-addons"
+                }
+            ],
+            "logToFile": true,
+            "justMyCode": false
+        },
+        {
+            "name": "[DevContainer mode] Odoo Debug",
+            "type": "debugpy",
+            "request": "launch",
+            "python": "/usr/bin/python3",
+            "program": "/usr/bin/odoo",
+            "justMyCode": false
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "name": "odoocker-light",
+    "workspaceFolder": "/workspace",
+    "dockerComposeFile": [
+        "docker-compose.yaml",
+        "docker-compose.devcontainer.yaml",
+        "docker-compose.extends.yaml"
+    ],
+    "service": "odoo-web",
+    "remoteUser": "root",
+    "shutdownAction": "stopCompose",
+    "overrideCommand": true,
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.debugpy",
+                "ms-python.vscode-pylance"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "onCreateCommand": "ln -s /usr/lib/python3/dist-packages/odoo /workspace/odoo/odoo"
+}

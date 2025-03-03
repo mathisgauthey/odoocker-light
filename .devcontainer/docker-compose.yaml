@@ -1,0 +1,44 @@
+services:
+  odoo-db:
+    image: postgres:16
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data/
+    ports:
+      - "${DB_PORT}:5432"
+    tty: true
+
+  odoo-web:
+    build:
+      context: ../
+      dockerfile: ./.devcontainer/Dockerfile
+      args:
+        - PROJECT_NAME=${PROJECT_NAME}
+        - ENTERPRISE_ADDONS=${ENTERPRISE_ADDONS}
+        - DESIGN_THEMES_ADDONS=${DESIGN_THEMES_ADDONS}
+    depends_on:
+      - odoo-db
+    ports:
+      - "8069:8069"
+      - "8888:8888"
+    volumes:
+      - odoo-web-data:/var/lib/odoo
+    environment:
+      - HOST=${DB_HOST}
+      - PORT=5432
+      - USER=${DB_USER}
+      - PASSWORD=${DB_PASSWORD}
+    env_file:
+      - .env
+    command: /usr/bin/python3 -m debugpy --listen 0.0.0.0:8888 /usr/bin/odoo --config=${ODOO_RC}
+    tty: true
+
+volumes:
+  odoo-web-data:
+  odoo-db-data:
+networks:
+  default:
