@@ -1,0 +1,7 @@
+.devcontainer/.env
+.devcontainer/docker-compose.extends.yaml
+
+extra-addons/
+
+odoo/odoo-design-themes/
+odoo/odoo-enterprise/
