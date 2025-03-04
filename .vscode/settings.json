@@ -1,0 +1,13 @@
+{
+    "python.languageServer": "None",
+    "python.analysis.typeCheckingMode": "standard",
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "python.analysis.extraPaths": [
+        "/workspace/odoo/odoo",
+        "/workspace/odoo/enterprise",
+        "/workspace/odoo/design-themes",
+        "/extra-addons"
+    ],
+}
