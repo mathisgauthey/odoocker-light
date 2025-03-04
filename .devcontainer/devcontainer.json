@@ -16,13 +16,15 @@
                 "ms-python.python",
                 "ms-python.debugpy",
                 "ms-python.vscode-pylance",
-                "ms-azuretools.vscode-docker"
+                "ms-azuretools.vscode-docker",
+                "trinhanhngoc.vscode-odoo"
             ]
         }
     },
     "features": {
         "ghcr.io/devcontainers/features/git:1": {},
-        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+        "ghcr.io/devcontainers/features/node:1": {}
     },
     "postCreateCommand": "bash /workspace/.devcontainer/post_create.sh"
 }
