@@ -17,8 +17,8 @@ services:
       context: ../
       dockerfile: ./.devcontainer/Dockerfile
       args:
-        - ENTERPRISE_ADDONS=${ENTERPRISE_ADDONS}
-        - DESIGN_THEMES_ADDONS=${DESIGN_THEMES_ADDONS}
+        - ENTERPRISE_ADDONS_PATH=${ENTERPRISE_ADDONS_PATH}
+        - DESIGN_THEMES_ADDONS_PATH=${DESIGN_THEMES_ADDONS_PATH}
     depends_on:
       - odoo-db
     ports:

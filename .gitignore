@@ -4,6 +4,6 @@
 extra-addons/
 
 odoo/odoo
-odoo/odoo-design-themes/
-odoo/odoo-enterprise/
+odoo/design-themes
+odoo/enterprise/
 odoo/requirements.txt

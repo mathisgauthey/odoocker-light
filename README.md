@@ -36,8 +36,8 @@ It allows you to quickly set up a local dev environment for Odoo using Docker Co
 │           └── ...
 ├── odoo/
 │   ├── odoo/                               # Symlink to Odoo source code (when in dev container)
-│   ├── odoo-design-themes/                 # Odoo design themes source code
-│   ├── odoo-enterprise/                    # Odoo Enterprise source code
+│   ├── design-themes/                      # Symlink to Odoo design themes source code
+│   ├── enterprise/                         # Odoo Enterprise source code
 │   ├── odoo.conf                           # Odoo configuration file template
 │   ├── odoorc.sh                           # Env variables to odoo.conf script
 │   └── requirements.txt                    # Odoo dependencies
@@ -51,7 +51,7 @@ It allows you to quickly set up a local dev environment for Odoo using Docker Co
 ### Configuration
 
 1. Clone this repository and navigate to the root folder.
-2. Clone `odoo-design-themes` and `odoo-enterprise` repositories in the `odoo` folder.
+2. Clone `design-themes` and `enterprise` repositories in the `odoo` folder.
 3. Add your Odoo modules repo to the `extra-addons` folder and create the `odoo/requirements.txt` file with the dependencies of your modules.
 4. Create a `docker-compose.extends.yaml` file in the `.devcontainers` folder to extend the main `docker-compose.yaml` file. This file could contain the volume mounts for your Odoo modules for example.
 
