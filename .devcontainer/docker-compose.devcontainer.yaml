@@ -1,4 +1,4 @@
 services:
-  odoo-web:
+  odoo_web:
     volumes:
       - ../:/workspace
