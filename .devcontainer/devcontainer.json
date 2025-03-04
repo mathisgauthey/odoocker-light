@@ -24,5 +24,5 @@
         "ghcr.io/devcontainers/features/git:1": {},
         "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
     },
-    "onCreateCommand": "[[ ! -L /workspace/odoo/odoo ]] && ln -s /usr/lib/python3/dist-packages/odoo /workspace/odoo/odoo; [[ ! -L /workspace/odoo/design-themes ]] && ln -s /usr/lib/python3/dist-packages/odoo/design-themes /workspace/odoo/design-themes"
+    "postCreateCommand": "bash /workspace/.devcontainer/post_create.sh"
 }
