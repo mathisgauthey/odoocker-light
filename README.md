@@ -57,7 +57,7 @@ It allows you to quickly set up a local dev environment for Odoo using Docker Co
 
     ```yaml
     services:
-    odoo-web:
+    odoo_web:
         volumes:
         - ../extra-addons/odoo-api-rest/odoo_api_rest:/mnt/extra-addons/odoo_api_rest
     ```
@@ -87,7 +87,7 @@ For instance :
 
 ```yaml
 services:
-  odoo-web:
+  odoo_web:
     volumes:
       - ../extra-addons/odoo-api-rest/odoo_api_rest:/mnt/extra-addons/odoo_api_rest
 ```

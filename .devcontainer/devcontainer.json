@@ -6,7 +6,7 @@
         "docker-compose.devcontainer.yaml",
         "docker-compose.extends.yaml"
     ],
-    "service": "odoo-web",
+    "service": "odoo_web",
     "remoteUser": "root",
     "shutdownAction": "stopCompose",
     "overrideCommand": true,
