@@ -15,12 +15,14 @@
             "extensions": [
                 "ms-python.python",
                 "ms-python.debugpy",
-                "ms-python.vscode-pylance"
+                "ms-python.vscode-pylance",
+                "ms-azuretools.vscode-docker"
             ]
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/git:1": {}
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
     },
     "onCreateCommand": "ln -s /usr/lib/python3/dist-packages/odoo /workspace/odoo/odoo"
 }
