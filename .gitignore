@@ -3,6 +3,8 @@
 
 extra-addons/
 
+node_modules/
+
 odoo/odoo
 odoo/design-themes
 odoo/enterprise/
