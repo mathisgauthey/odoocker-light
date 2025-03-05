@@ -1,6 +1,6 @@
 services:
   odoo_db:
-    image: postgres:16
+    image: postgres:${POSTGRES_VERSION}
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=${DB_USER}
@@ -17,6 +17,7 @@ services:
       context: ../
       dockerfile: ./.devcontainer/Dockerfile
       args:
+        - ODOO_VERSION=${ODOO_VERSION}
         - ENTERPRISE_ADDONS_PATH=${ENTERPRISE_ADDONS_PATH}
         - DESIGN_THEMES_ADDONS_PATH=${DESIGN_THEMES_ADDONS_PATH}
     depends_on:
