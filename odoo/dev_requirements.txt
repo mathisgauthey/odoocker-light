@@ -5,6 +5,6 @@ pydevd-odoo==1.2.2
 pydevd-pycharm~=243.24978.46
 pytest==7.4.4 # Source : https://github.com/camptocamp/pytest-odoo/issues/63
 pytest-odoo==1.0.0
-pytest-cov==5.0.0
+pytest-cov==6.1.1
 pytest-html==4.1.1
 coverage==7.6.0
